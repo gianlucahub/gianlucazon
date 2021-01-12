@@ -1,0 +1,25 @@
+plugins {
+	id "com.gianlucazon.java-application-conventions"
+	id "org.springframework.boot" version "${springBootVersion}"
+}
+
+
+group = 'com.gianlucazon'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+
+dependencies {
+	implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+	implementation "org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}"
+	runtimeOnly "com.h2database:h2:${h2DatabaseVersion}"
+	testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+	
+	implementation project(":gianlucazon_controller_impl")
+	implementation project(":gianlucazon_service_impl")
+	implementation project(":gianlucazon_dao_impl")
+}
+
+test {
+	useJUnitPlatform()
+}

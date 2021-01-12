@@ -1,0 +1,11 @@
+plugins {
+    id "com.gianlucazon.java-library-conventions"
+}
+
+dependencies {
+    implementation "org.springframework:spring-web:${springVersion}" 
+    
+    implementation project(":gianlucazon_controller")
+	implementation project(":gianlucazon_service")
+}
+

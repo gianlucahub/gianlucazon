@@ -1,0 +1,7 @@
+plugins {
+    id "com.gianlucazon.java-library-conventions"
+}
+
+dependencies {
+	implementation project(':gianlucazon_dao')
+}
