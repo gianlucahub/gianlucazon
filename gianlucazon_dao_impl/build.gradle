@@ -4,4 +4,8 @@ plugins {
 
 dependencies {
 	implementation project(':gianlucazon_dao')
+	implementation project(':gianlucazon_model')
+	implementation "org.springframework:spring-jdbc:${springVersion}"
+	implementation "javax.annotation:javax.annotation-api:${javaAnnotationVersion}"
+	
 }
